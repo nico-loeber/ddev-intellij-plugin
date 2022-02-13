@@ -11,6 +11,12 @@
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.jetbrains.php</depends>
+    <depends>org.jetbrains.plugins.phpstorm-remote-interpreter</depends>
+    <depends>org.jetbrains.plugins.remote-run</depends>
+    <depends>org.jetbrains.plugins.remote-run</depends>
+    <depends>org.jetbrains.plugins.phpstorm-docker</depends>
+    <depends>Docker</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <notificationGroup id="DdevIntegration" key="notification_group.main" displayType="BALLOON"
@@ -32,6 +38,9 @@
                              key="settings.headline"/>
 
         <postStartupActivity implementation="de.php_perfect.intellij.ddev.PostStartupActivity"/>
+
+        <remote.credentialsLanguageContribution
+                implementation="de.php_perfect.intellij.ddev.wip.DdevCredentialsPhpContributor"/>
     </extensions>
 
     <actions>

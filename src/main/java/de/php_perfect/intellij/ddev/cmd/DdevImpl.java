@@ -5,8 +5,10 @@ import com.intellij.openapi.project.Project;
 import de.php_perfect.intellij.ddev.cmd.parser.JsonParser;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 
 public final class DdevImpl implements Ddev {
     private final @NotNull Project project;
